@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>cards</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" type="text/css" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
         <div class="card">
-            <img src="img/img5.jpg" alt="img" style="width: 100%">
-               <div class="container">
-                   <h2>MUMEET RAWAT</h2>
-                     <p>He is a Frontend Developer</p>
-               </div>
+            <div class="top-section">
+                <img id="image-container" src="./img/1.png" alt="">
+                <div class="nav">
+                    <img onclick="change_img(this)" src="./img/1.png" alt="">
+                    <img onclick="change_img(this)" src="./img/2.png" alt="">
+                    <img onclick="change_img(this)" src="./img/2.png" alt="">
+                </div>
+                <div class="price">$80</div>
+            </div>
+        
+            <div class="product-info">
+                <div class="name">Sanglasses</div>
+                <div class="dis">Awesome Men Sanglasses</div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+        
         </div>
-    </body>
+
+        <script type="text/javascript">
+            var container = document.getElementById("image-container");
+            function change_img(image) {
+                container.src = image.src;
+            }
+        </script>
+</body>
 </html>
